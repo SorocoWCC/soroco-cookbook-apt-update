@@ -14,3 +14,10 @@ cron 'daily_update' do
   command 'apt-get update'
 end
 
+# Creates the cron entry under the root user
+cron 'daily_upgrade' do
+  user 'root'
+  hour '9'
+  minute '30'
+  command 'apt-get upgrade'
+end
