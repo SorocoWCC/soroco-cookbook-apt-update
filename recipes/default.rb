@@ -19,5 +19,5 @@ cron 'daily_upgrade' do
   user 'root'
   hour '9'
   minute '30'
-  command 'apt-get upgrade'
+  command 'apt-get upgrade -y'
 end
