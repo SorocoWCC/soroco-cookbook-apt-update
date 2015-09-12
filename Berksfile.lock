@@ -1,0 +1,7 @@
+DEPENDENCIES
+  soroco_apt
+    path: .
+    metadata: true
+
+GRAPH
+  soroco_apt (0.1.0)

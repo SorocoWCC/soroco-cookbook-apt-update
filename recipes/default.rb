@@ -6,4 +6,16 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'apt::default'
+# Creates the cron entry under the root user
+cron 'daily_update' do
+  user 'root'	
+  hour '9'
+  minute '0'
+  command 'apt-get update'
+
+# Creates the cron entry under the root user
+cron 'daily_upgrade' do
+  user 'root'   
+  hour '9'
+  minute '30'
+  command 'apt-get upgrade'
