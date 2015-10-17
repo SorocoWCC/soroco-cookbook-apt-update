@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 # Creates the cron entry under the root user
+
+include_recipe 'chef-client::service'
+
 cron 'daily_update' do
   user 'root'	
   hour '9'
